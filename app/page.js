@@ -9,13 +9,13 @@ import { addItem, addName } from "@/lib/features/dataSlice";
 
 export default function Home() {
 
-  const [text,setText] = useState({})
   const data = useSelector(state => state.data)
   const dispatch = useDispatch()
 
   function onSubmit(e) {
     console.log(data)
-    dispatch(addName(''))
+    dispatch(addName({name:''}))
+    dispatch(addItem({item:''}))
     e.preventDefault()
   }
 
@@ -27,9 +27,9 @@ export default function Home() {
       <Form>
         <FormGroup>
           <Label for="name">Name</Label>
-          <Input id="name" name="name" placeholder="Enter your name..." onChange={(e)=>{dispatch(addName({name:e.target.value}))}} />
+          <Input id="name" name="name" placeholder="Enter your name..." onChange={(e)=>{dispatch(addName({name:e.target.value}))}} value={useSelector(state=>state.data.name)}/>
           <Label for="item">Item</Label>
-          <Input id="item" name="item" placeholder="Enter items name..." onChange={(e)=>{dispatch(addItem({item:e.target.value}))}} />
+          <Input id="item" name="item" placeholder="Enter items name..." onChange={(e)=>{dispatch(addItem({item:e.target.value}))}} value={useSelector(state=>state.data.item)}/>
         </FormGroup>
         <Button size="lg" color="success" onClick={(e)=>{onSubmit(e)}}>Submit</Button>
       </Form>
