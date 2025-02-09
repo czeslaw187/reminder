@@ -6,12 +6,14 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { addForm, checkDetails } from "@/lib/features/dataSlice";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
 
   const [cont,setCont] = useState({})
   const data = useSelector(state => state?.data)
   const dispatch = useDispatch()
+  const router = useRouter()
 
   function handleChange(e) {
     setCont({...cont, [e.target.name]:e.target.value})
@@ -23,6 +25,9 @@ export default function Home() {
   dispatch(checkDetails(cont))
 }  
 
+  if (data.isLogged) {
+    router.push('/Main')
+  }
   return (
     <div className="w-screen h-screen flex flex-col bg-gradient-to-bl from-indigo-200 to-indigo-300">
       <Form>
