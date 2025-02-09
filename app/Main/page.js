@@ -17,9 +17,8 @@ export default function Main() {
     useEffect(()=>{
         if (!data.isLogged) {
             router.push('/')
-        } else if (!data.items) {
-            dispatch(getItems())
-        }
+        } 
+        dispatch(getItems())
     }, [dispatch, router])
     console.log(data.items, 'page main')
     return(

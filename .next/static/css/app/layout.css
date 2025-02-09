@@ -553,6 +553,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -561,9 +565,9 @@ video {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .ml-auto {
   margin-left: auto;
@@ -591,6 +595,9 @@ video {
 }
 .w-screen {
   width: 100vw;
+}
+.w-\[18rem\] {
+  width: 18rem;
 }
 .flex-row {
   flex-direction: row;
