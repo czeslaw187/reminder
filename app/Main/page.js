@@ -17,18 +17,18 @@ export default function Main() {
     useEffect(()=>{
         if (!data.isLogged) {
             router.push('/')
-        } else {
+        } else if (!data.items) {
             dispatch(getItems())
         }
-    }, [dispatch])
-    
+    }, [dispatch, router])
+    console.log(data.items, 'page main')
     return(
         <>
             <NavBar />
             <div className="w-screen h-screen flex flex-row flex-wrap bg-gradient-to-bl from-indigo-200 to-indigo-300">
                 <Nav>
                     <NavItem>
-                        <NavLink href={'#'}>
+                        <NavLink href={'/Main/Tapas'}>
                             <Card className="w-[20rem] mx-4 my-2 text-lg hover:shadow-md hover:shadow-black">
                                 <CardBody className="text-center">
                                     TAPAS
