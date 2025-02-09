@@ -67,72 +67,6 @@ module.exports = require("next/dist/server/app-render/work-unit-async-storage.ex
 
 /***/ }),
 
-/***/ "assert":
-/*!*************************!*\
-  !*** external "assert" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("assert");
-
-/***/ }),
-
-/***/ "events":
-/*!*************************!*\
-  !*** external "events" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("events");
-
-/***/ }),
-
-/***/ "fs":
-/*!*********************!*\
-  !*** external "fs" ***!
-  \*********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs");
-
-/***/ }),
-
-/***/ "http":
-/*!***********************!*\
-  !*** external "http" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http");
-
-/***/ }),
-
-/***/ "https":
-/*!************************!*\
-  !*** external "https" ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("https");
-
-/***/ }),
-
-/***/ "os":
-/*!*********************!*\
-  !*** external "os" ***!
-  \*********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("os");
-
-/***/ }),
-
 /***/ "path":
 /*!***********************!*\
   !*** external "path" ***!
@@ -141,61 +75,6 @@ module.exports = require("os");
 
 "use strict";
 module.exports = require("path");
-
-/***/ }),
-
-/***/ "stream":
-/*!*************************!*\
-  !*** external "stream" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("stream");
-
-/***/ }),
-
-/***/ "tty":
-/*!**********************!*\
-  !*** external "tty" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("tty");
-
-/***/ }),
-
-/***/ "url":
-/*!**********************!*\
-  !*** external "url" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("url");
-
-/***/ }),
-
-/***/ "util":
-/*!***********************!*\
-  !*** external "util" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("util");
-
-/***/ }),
-
-/***/ "zlib":
-/*!***********************!*\
-  !*** external "zlib" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("zlib");
 
 /***/ }),
 
@@ -268,7 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   addItem: () => (/* binding */ addItem),\n/* harmony export */   addName: () => (/* binding */ addName),\n/* harmony export */   dataSlice: () => (/* binding */ dataSlice),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   getDataToken: () => (/* binding */ getDataToken)\n/* harmony export */ });\n/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ \"(ssr)/./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"(ssr)/./node_modules/axios/lib/axios.js\");\n\n\nconst initialState = {\n    name: '',\n    item: ''\n};\nconst dataSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({\n    name: 'data',\n    initialState,\n    reducers: {\n        addName: (state, action)=>{\n            state.name = action.payload.name;\n        },\n        addItem: (state, action)=>{\n            state.item = action.payload.item;\n        }\n    }\n});\nconst { addName, addItem } = dataSlice.actions;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataSlice.reducer);\nconst getDataToken = (obj)=>async (dispatch)=>{\n        await axios__WEBPACK_IMPORTED_MODULE_1__[\"default\"].post(\"http://localhost:3000\" + '/api/getDataLatoken', {\n            obj\n        }).then((resp)=>{\n            console.log(resp.data.cont.obj, 'slice');\n            dispatch(addItem(resp.data));\n        });\n    };\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9saWIvZmVhdHVyZXMvZGF0YVNsaWNlLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBK0M7QUFDdEI7QUFFekIsTUFBTUUsZUFBZTtJQUNqQkMsTUFBTTtJQUNOQyxNQUFNO0FBQ1Y7QUFFTyxNQUFNQyxZQUFZTCw2REFBV0EsQ0FBQztJQUNqQ0csTUFBTTtJQUNORDtJQUNBSSxVQUFVO1FBQ05DLFNBQVMsQ0FBQ0MsT0FBT0M7WUFDYkQsTUFBTUwsSUFBSSxHQUFHTSxPQUFPQyxPQUFPLENBQUNQLElBQUk7UUFDcEM7UUFDQVEsU0FBUyxDQUFDSCxPQUFPQztZQUNiRCxNQUFNSixJQUFJLEdBQUdLLE9BQU9DLE9BQU8sQ0FBQ04sSUFBSTtRQUNwQztJQUNKO0FBQ0osR0FBRTtBQUVLLE1BQU0sRUFBQ0csT0FBTyxFQUFFSSxPQUFPLEVBQUMsR0FBR04sVUFBVU8sT0FBTztBQUNuRCxpRUFBZVAsVUFBVVEsT0FBTztBQUV6QixNQUFNQyxlQUFjLENBQUNDLE1BQU8sT0FBTUM7UUFDckMsTUFBTWYsNkNBQUtBLENBQUNnQixJQUFJLENBQUNDLHVCQUEyQixHQUFHLHVCQUFzQjtZQUFDSDtRQUFHLEdBQ3pFTSxJQUFJLENBQUMsQ0FBQ0M7WUFBUUMsUUFBUUMsR0FBRyxDQUFDRixLQUFLRyxJQUFJLENBQUNDLElBQUksQ0FBQ1gsR0FBRyxFQUFFO1lBQVVDLFNBQVNMLFFBQVFXLEtBQUtHLElBQUk7UUFBRTtJQUN4RixFQUFDIiwic291cmNlcyI6WyIvaG9tZS9jemVodWcvSnMvcmVtaW5kZXIvbGliL2ZlYXR1cmVzL2RhdGFTbGljZS5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjcmVhdGVTbGljZSB9IGZyb20gXCJAcmVkdXhqcy90b29sa2l0XCI7XG5pbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnXG5cbmNvbnN0IGluaXRpYWxTdGF0ZSA9IHtcbiAgICBuYW1lOiAnJyxcbiAgICBpdGVtOiAnJ1xufVxuXG5leHBvcnQgY29uc3QgZGF0YVNsaWNlID0gY3JlYXRlU2xpY2Uoe1xuICAgIG5hbWU6ICdkYXRhJyxcbiAgICBpbml0aWFsU3RhdGUsXG4gICAgcmVkdWNlcnM6IHtcbiAgICAgICAgYWRkTmFtZTogKHN0YXRlLCBhY3Rpb24pPT4ge1xuICAgICAgICAgICAgc3RhdGUubmFtZSA9IGFjdGlvbi5wYXlsb2FkLm5hbWVcbiAgICAgICAgfSxcbiAgICAgICAgYWRkSXRlbTogKHN0YXRlLCBhY3Rpb24pPT4ge1xuICAgICAgICAgICAgc3RhdGUuaXRlbSA9IGFjdGlvbi5wYXlsb2FkLml0ZW1cbiAgICAgICAgfVxuICAgIH1cbn0pXG5cbmV4cG9ydCBjb25zdCB7YWRkTmFtZSwgYWRkSXRlbX0gPSBkYXRhU2xpY2UuYWN0aW9uc1xuZXhwb3J0IGRlZmF1bHQgZGF0YVNsaWNlLnJlZHVjZXJcblxuZXhwb3J0IGNvbnN0IGdldERhdGFUb2tlbiA9KG9iaik9PiBhc3luYyBkaXNwYXRjaCA9PiB7XG4gICAgYXdhaXQgYXhpb3MucG9zdChwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19VUkwgKyAnL2FwaS9nZXREYXRhTGF0b2tlbicse29ian0pLlxuICAgIHRoZW4oKHJlc3ApPT57Y29uc29sZS5sb2cocmVzcC5kYXRhLmNvbnQub2JqLCAnc2xpY2UnKTsgZGlzcGF0Y2goYWRkSXRlbShyZXNwLmRhdGEpKX0pXG59Il0sIm5hbWVzIjpbImNyZWF0ZVNsaWNlIiwiYXhpb3MiLCJpbml0aWFsU3RhdGUiLCJuYW1lIiwiaXRlbSIsImRhdGFTbGljZSIsInJlZHVjZXJzIiwiYWRkTmFtZSIsInN0YXRlIiwiYWN0aW9uIiwicGF5bG9hZCIsImFkZEl0ZW0iLCJhY3Rpb25zIiwicmVkdWNlciIsImdldERhdGFUb2tlbiIsIm9iaiIsImRpc3BhdGNoIiwicG9zdCIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19VUkwiLCJ0aGVuIiwicmVzcCIsImNvbnNvbGUiLCJsb2ciLCJkYXRhIiwiY29udCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./lib/features/dataSlice.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   addForm: () => (/* binding */ addForm),\n/* harmony export */   dataSlice: () => (/* binding */ dataSlice),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ \"(ssr)/./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs\");\n\n\nconst initialState = {\n    form: {}\n};\n// ------------------------------ REDUCERS -------------------------------------//\nconst dataSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({\n    name: 'data',\n    initialState,\n    reducers: {\n        addForm: (state, action)=>{\n            state.form = action.payload;\n            console.log(state.form, 'upload');\n        }\n    }\n});\nconst { addForm } = dataSlice.actions;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataSlice.reducer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9saWIvZmVhdHVyZXMvZGF0YVNsaWNlLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBK0M7QUFDdEI7QUFFekIsTUFBTUUsZUFBZTtJQUNqQkMsTUFBTSxDQUFDO0FBQ1g7QUFFQSxrRkFBa0Y7QUFFM0UsTUFBTUMsWUFBWUosNkRBQVdBLENBQUM7SUFDakNLLE1BQU07SUFDTkg7SUFDQUksVUFBVTtRQUNOQyxTQUFTLENBQUNDLE9BQU9DO1lBQ2JELE1BQU1MLElBQUksR0FBR00sT0FBT0MsT0FBTztZQUMzQkMsUUFBUUMsR0FBRyxDQUFDSixNQUFNTCxJQUFJLEVBQUU7UUFDNUI7SUFDSjtBQUNKLEdBQUU7QUFFSyxNQUFNLEVBQUNJLE9BQU8sRUFBQyxHQUFHSCxVQUFVUyxPQUFPO0FBQzFDLGlFQUFlVCxVQUFVVSxPQUFPIiwic291cmNlcyI6WyIvaG9tZS9jemVodWcvSnMvcmVtaW5kZXIvbGliL2ZlYXR1cmVzL2RhdGFTbGljZS5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjcmVhdGVTbGljZSB9IGZyb20gXCJAcmVkdXhqcy90b29sa2l0XCI7XG5pbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnXG5cbmNvbnN0IGluaXRpYWxTdGF0ZSA9IHtcbiAgICBmb3JtOiB7fVxufVxuXG4vLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gUkVEVUNFUlMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8vXG5cbmV4cG9ydCBjb25zdCBkYXRhU2xpY2UgPSBjcmVhdGVTbGljZSh7XG4gICAgbmFtZTogJ2RhdGEnLFxuICAgIGluaXRpYWxTdGF0ZSxcbiAgICByZWR1Y2Vyczoge1xuICAgICAgICBhZGRGb3JtOiAoc3RhdGUsIGFjdGlvbik9PiB7XG4gICAgICAgICAgICBzdGF0ZS5mb3JtID0gYWN0aW9uLnBheWxvYWRcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKHN0YXRlLmZvcm0sICd1cGxvYWQnKVxuICAgICAgICB9XG4gICAgfVxufSlcblxuZXhwb3J0IGNvbnN0IHthZGRGb3JtfSA9IGRhdGFTbGljZS5hY3Rpb25zXG5leHBvcnQgZGVmYXVsdCBkYXRhU2xpY2UucmVkdWNlclxuXG4vLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIEFDVElPTlMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8vXG5cbi8vIGV4cG9ydCBjb25zdCBnZXREYXRhVG9rZW4gPShvYmopPT4gYXN5bmMgZGlzcGF0Y2ggPT4ge1xuLy8gICAgIGF3YWl0IGF4aW9zLnBvc3QocHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfVVJMICsgJy9hcGkvZ2V0RGF0YUxhdG9rZW4nLHtvYmp9KS5cbi8vICAgICB0aGVuKChyZXNwKT0+e2NvbnNvbGUubG9nKHJlc3AuZGF0YS5jb250Lm9iaiwgJ3NsaWNlJyk7IGRpc3BhdGNoKGFkZEl0ZW0oKSl9KVxuLy8gfSJdLCJuYW1lcyI6WyJjcmVhdGVTbGljZSIsImF4aW9zIiwiaW5pdGlhbFN0YXRlIiwiZm9ybSIsImRhdGFTbGljZSIsIm5hbWUiLCJyZWR1Y2VycyIsImFkZEZvcm0iLCJzdGF0ZSIsImFjdGlvbiIsInBheWxvYWQiLCJjb25zb2xlIiwibG9nIiwiYWN0aW9ucyIsInJlZHVjZXIiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./lib/features/dataSlice.js\n");
 
 /***/ }),
 
@@ -335,7 +214,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/mime-db","vendor-chunks/axios","vendor-chunks/@reduxjs","vendor-chunks/react-redux","vendor-chunks/immer","vendor-chunks/reselect","vendor-chunks/follow-redirects","vendor-chunks/debug","vendor-chunks/redux","vendor-chunks/form-data","vendor-chunks/asynckit","vendor-chunks/combined-stream","vendor-chunks/use-sync-external-store","vendor-chunks/mime-types","vendor-chunks/proxy-from-env","vendor-chunks/ms","vendor-chunks/supports-color","vendor-chunks/delayed-stream","vendor-chunks/@swc","vendor-chunks/redux-thunk","vendor-chunks/has-flag"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2F_not-found%2Fpage&page=%2F_not-found%2Fpage&appPaths=&pagePath=node_modules%2Fnext%2Fdist%2Fclient%2Fcomponents%2Fnot-found-error.js&appDir=%2Fhome%2Fczehug%2FJs%2Freminder%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fczehug%2FJs%2Freminder&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@reduxjs","vendor-chunks/react-redux","vendor-chunks/immer","vendor-chunks/reselect","vendor-chunks/redux","vendor-chunks/use-sync-external-store","vendor-chunks/@swc","vendor-chunks/redux-thunk"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2F_not-found%2Fpage&page=%2F_not-found%2Fpage&appPaths=&pagePath=node_modules%2Fnext%2Fdist%2Fclient%2Fcomponents%2Fnot-found-error.js&appDir=%2Fhome%2Fczehug%2FJs%2Freminder%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fczehug%2FJs%2Freminder&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();

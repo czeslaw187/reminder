@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { addItem, addName } from "@/lib/features/dataSlice";
-import { getDataToken } from "@/lib/features/dataSlice";
+import { addForm } from "@/lib/features/dataSlice";
 
 export default function Home() {
 
@@ -20,20 +19,20 @@ export default function Home() {
 
   function onSubmit(e) {
   e.preventDefault()
-  console.log(data)
-  dispatch(addName({name:''}))
-  dispatch(getDataToken(cont))
+  console.log(cont)
+  dispatch(addForm(cont))
+  setCont({name:''})
 }  
   return (
     <div className="w-screen h-screen flex flex-col bg-gradient-to-bl from-indigo-200 to-indigo-300">
       <Form>
-        <FormGroup>
+        <FormGroup className="w-[15rem] h-auto mx-auto mt-5 shadow-sm shadow-slate-800 border-1 rounded-md px-3 py-5 flex flex-col justify-center">
           <Label for="name">Name</Label>
-          <Input id="name" name="name" placeholder="Enter your name..." onChange={(e)=>{handleChange(e)}} />
-          <Label for="item">Item</Label>
-          <Input id="item" name="item" placeholder="Enter items name..." onChange={(e)=>{handleChange(e)}}/>
+          <Input id="name" name="name" placeholder="Enter your name..." onChange={(e)=>{handleChange(e)}} value={cont?.name || ''}/>
+          <Label for="password">Item</Label>
+          <Input id="password" name="password" type="password" placeholder="Enter your password..." onChange={(e)=>{handleChange(e)}} value={cont?.password || ''}/>
+          <Button size="lg" color="success" className="my-3" onClick={(e)=>{onSubmit(e)}}>Submit</Button>
         </FormGroup>
-        <Button size="lg" color="success" onClick={(e)=>{onSubmit(e)}}>Submit</Button>
       </Form>
     </div>
   );
