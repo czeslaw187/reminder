@@ -14,6 +14,6 @@ export async function POST(req) {
         }
 
     } catch (error) {
-        
+        return new Response(JSON.stringify(error.message))
     }
 }
