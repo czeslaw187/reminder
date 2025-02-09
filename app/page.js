@@ -23,7 +23,6 @@ export default function Home() {
   dispatch(checkDetails(cont))
 }  
 
-  console.log(data, 'homepage')
   return (
     <div className="w-screen h-screen flex flex-col bg-gradient-to-bl from-indigo-200 to-indigo-300">
       <Form>
