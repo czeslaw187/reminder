@@ -9,8 +9,7 @@ export async function GET(req) {
         const response = await client.query(
             "SELECT * FROM products"
         )
-        console.log(response.rows,'server')
-        return new Response(JSON.stringify(response.fields))
+        return new Response(JSON.stringify(response.rows))
     } catch (error) {
         return new Response(JSON.stringify({
             message:error.message

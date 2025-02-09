@@ -20,23 +20,19 @@ export default function Tapas() {
     console.log(data.items,'tapas page')
     return(
         <>
-            <div className="w-screen h-screen flex flex-col bg-gradient-to-bl from-indigo-200 to-indigo-300">
-                <NavBar/>
-                <HomeButton />
+            <NavBar/>
+            <HomeButton />
+            <div className="w-screen h-screen flex flex-row bg-gradient-to-bl from-indigo-200 to-indigo-300">
+                
+                
                 {
                     data.items.map((item,id)=>{
                         return(
-                            <Card className="w-[18rem] mx-5" key={id}>
-                                <CardHeader>
-                                    <CardText>{item.name}</CardText>
-                                </CardHeader>
-                                <CardBody>
-                                    <CardText>{item.description}</CardText>
-                                </CardBody>
-                                <CardFooter>
-                                    <CardText>{item.price}</CardText>
-                                </CardFooter>
-                            </Card>
+                            <div key={id} className="w-[18rem] h-[20rem] flex flex-col flex-wrap bg-indigo-100 rounded-sm mx-3 my-2">
+                                <div className="text-center text-lg border-b-2 my-3">{item.name}</div>
+                                <div className="text-center my-auto">{item.description}</div>
+                                <div className="text-left mt-auto p-2">Price: £{item.price}</div>
+                            </div>
                         )
                     })
                 }

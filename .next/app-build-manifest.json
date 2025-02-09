@@ -6,12 +6,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Main/Tapas/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Main/Tapas/page.css",
-      "static/chunks/app/Main/Tapas/page.js"
-    ],
     "/Main/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -22,6 +16,12 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/getProducts/route.js"
+    ],
+    "/Main/Tapas/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Main/Tapas/page.css",
+      "static/chunks/app/Main/Tapas/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
