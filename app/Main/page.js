@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import NavBar from "../Components/navbar"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Main() {
 

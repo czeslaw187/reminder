@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
 
   const [cont,setCont] = useState({})
+  const [check,setCheck] = useState(false)
   const data = useSelector(state => state?.data)
   const dispatch = useDispatch()
   const router = useRouter()
@@ -25,6 +26,10 @@ export default function Home() {
   dispatch(checkDetails(cont))
 }  
 
+  function toggleVis() {
+    setCheck(!check)
+  }
+
   useEffect(()=>{
     if (data.isLogged) {
       router.push('/Main')
@@ -37,8 +42,12 @@ export default function Home() {
         <FormGroup className="w-[15rem] h-auto mx-auto mt-5 shadow-sm shadow-slate-800 border-1 rounded-md px-3 py-5 flex flex-col justify-center">
           <Label for="name">Name</Label>
           <Input id="name" name="name" placeholder="Enter your name..." onChange={(e)=>{handleChange(e)}} value={cont?.name || ''}/>
-          <Label for="password">Item</Label>
-          <Input id="password" name="password" type="password" placeholder="Enter your password..." onChange={(e)=>{handleChange(e)}} value={cont?.password || ''}/>
+          <Label for="password">Password</Label>
+          <Input id="password" name="password" type={check ? null : "password"} placeholder="Enter your password..." onChange={(e)=>{handleChange(e)}} value={cont?.password || ''}/>
+          <FormGroup check>
+            <Input id="isShown" name="isShown" type="checkbox" onChange={toggleVis}/>
+            <Label check>Show password</Label>
+          </FormGroup>
           <Button size="lg" color="success" className="my-3" onClick={(e)=>{onSubmit(e)}}>Submit</Button>
         </FormGroup>
       </Form>
