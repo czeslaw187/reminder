@@ -13,11 +13,14 @@
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "next": "15.1.6",
+    "pg": "^8.13.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "reactstrap": "^9.2.3",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "sequelize": "^6.37.5",
+    "sequelize-cockroachdb": "^6.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

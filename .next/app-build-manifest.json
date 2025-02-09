@@ -6,22 +6,22 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Main/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Main/page.css",
-      "static/chunks/app/Main/page.js"
-    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/api/checkDetails/route": [
+    "/Main/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/api/checkDetails/route.js"
+      "static/css/app/Main/page.css",
+      "static/chunks/app/Main/page.js"
+    ],
+    "/api/getProducts/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/getProducts/route.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
