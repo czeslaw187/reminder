@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/czehug/Js/reminder/app/layout\":[\"static/media/569ce4b8f30dc480-s.p.woff2\",\"static/media/93f479601ee12b01-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/czehug/Js/reminder/app/layout\":[\"static/media/569ce4b8f30dc480-s.p.woff2\",\"static/media/93f479601ee12b01-s.p.woff2\"],\"/home/czehug/Js/reminder/app/Main/Tapas/page\":[\"static/media/c5470780de7089f3-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
