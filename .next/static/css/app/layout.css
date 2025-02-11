@@ -591,8 +591,11 @@ video {
 .flex {
   display: flex;
 }
-.h-\[20rem\] {
-  height: 20rem;
+.h-\[30rem\] {
+  height: 30rem;
+}
+.h-\[60\%\] {
+  height: 60%;
 }
 .h-auto {
   height: auto;
@@ -600,44 +603,17 @@ video {
 .h-screen {
   height: 100vh;
 }
-.h-\[50\%\] {
-  height: 50%;
-}
-.h-\[21rem\] {
-  height: 21rem;
-}
-.h-\[60\%\] {
-  height: 60%;
-}
-.h-\[23rem\] {
-  height: 23rem;
-}
-.h-\[30rem\] {
-  height: 30rem;
-}
 .w-\[15rem\] {
   width: 15rem;
 }
 .w-\[20rem\] {
   width: 20rem;
 }
-.w-\[45\%\] {
-  width: 45%;
-}
-.w-screen {
-  width: 100vw;
-}
 .w-full {
   width: 100%;
 }
-.w-\[35\%\] {
-  width: 35%;
-}
-.w-\[30\%\] {
-  width: 30%;
-}
-.w-\[90\%\] {
-  width: 90%;
+.w-screen {
+  width: 100vw;
 }
 .flex-row {
   flex-direction: row;
@@ -666,10 +642,6 @@ video {
 .border-b-2 {
   border-bottom-width: 2px;
 }
-.bg-indigo-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 231 255 / var(--tw-bg-opacity, 1));
-}
 .bg-gradient-to-bl {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
@@ -679,6 +651,11 @@ video {
 .from-amber-200 {
   --tw-gradient-from: #fde68a var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(253 230 138 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-cyan-200 {
+  --tw-gradient-from: #a5f3fc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(165 243 252 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-indigo-200 {
@@ -691,25 +668,17 @@ video {
   --tw-gradient-to: rgb(217 249 157 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
-.from-cyan-200 {
-  --tw-gradient-from: #a5f3fc var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(165 243 252 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
 .to-indigo-300 {
   --tw-gradient-to: #a5b4fc var(--tw-gradient-to-position);
 }
 .to-lime-200 {
   --tw-gradient-to: #d9f99d var(--tw-gradient-to-position);
 }
-.to-slate-950 {
-  --tw-gradient-to: #020617 var(--tw-gradient-to-position);
-}
 .to-slate-700 {
   --tw-gradient-to: #334155 var(--tw-gradient-to-position);
 }
-.p-2 {
-  padding: 0.5rem;
+.to-slate-950 {
+  --tw-gradient-to: #020617 var(--tw-gradient-to-position);
 }
 .p-1 {
   padding: 0.25rem;
