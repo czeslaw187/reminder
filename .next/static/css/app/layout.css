@@ -597,6 +597,9 @@ video {
 .h-\[60\%\] {
   height: 60%;
 }
+.h-\[6rem\] {
+  height: 6rem;
+}
 .h-auto {
   height: auto;
 }
@@ -724,6 +727,9 @@ video {
 .shadow-slate-800 {
   --tw-shadow-color: #1e293b;
   --tw-shadow: var(--tw-shadow-colored);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 :root {

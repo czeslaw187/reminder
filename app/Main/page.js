@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux"
 import NavBar from "../Components/navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getItems } from "@/lib/features/dataSlice"
-import { Card, CardBody, CardHeader, NavItem, NavLink, Nav } from "reactstrap"
+import { Nav } from "reactstrap"
+import CatButton from "../Components/catButton"
 
 export default function Main() {
 
@@ -20,22 +21,21 @@ export default function Main() {
         } 
         dispatch(getItems())
     }, [dispatch, router])
-    console.log(data.items, 'page main')
+    const catNum = data.items.filter((val, id, self)=> id === self.findIndex((t)=> (t.category === val.category)))
+    console.log(catNum, 'page main')
     return(
         <>
             <NavBar />
             <div className="w-screen h-screen flex flex-row flex-wrap bg-gradient-to-bl from-indigo-200 to-indigo-300">
                 <Nav>
-                    <NavItem>
-                        <NavLink href={'/Main/Tapas'}>
-                            <Card className="w-[20rem] mx-4 my-2 text-lg hover:shadow-md hover:shadow-black">
-                                <CardBody className="text-center">
-                                    TAPAS
-                                </CardBody>
-                            </Card>
-                        </NavLink>
-                    </NavItem>
-                </Nav>
+                {
+                    catNum.map((el,id)=>{
+                        return(
+                            <CatButton key={id} id={id} el={el} />
+                        )
+                    })
+                }
+                </Nav>   
             </div>
         </>
     )
