@@ -22,12 +22,11 @@ export default function Main() {
         dispatch(getItems())
     }, [dispatch, router])
     const catNum = data.items.filter((val, id, self)=> id === self.findIndex((t)=> (t.category === val.category)))
-    console.log(catNum, 'page main')
     return(
         <>
             <NavBar />
-            <div className="w-screen h-screen flex flex-row flex-wrap bg-gradient-to-bl from-indigo-200 to-indigo-300">
-                <Nav>
+            <div className="w-screen h-screen bg-gradient-to-bl from-indigo-200 to-indigo-300">
+                <Nav className="flex flex-row flex-wrap justify-between ">
                 {
                     catNum.map((el,id)=>{
                         return(

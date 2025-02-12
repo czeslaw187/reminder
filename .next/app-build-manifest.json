@@ -17,12 +17,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/getProducts/route.js"
     ],
-    "/Main/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Main/[slug]/page.css",
-      "static/chunks/app/Main/[slug]/page.js"
-    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
