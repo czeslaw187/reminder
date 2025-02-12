@@ -25,7 +25,7 @@ export default function Main() {
     return(
         <>
             <NavBar />
-            <div className="w-screen h-screen bg-gradient-to-bl from-indigo-200 to-indigo-300">
+            <div className="w-screen md:h-screen bg-gradient-to-bl from-indigo-200 to-indigo-300">
                 <Nav className="flex flex-row flex-wrap justify-between ">
                 {
                     catNum.map((el,id)=>{
